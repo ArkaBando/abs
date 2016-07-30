@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="productBorderPane" prefHeight="671.0" prefWidth="905.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="automatedbillingsoftware.ProductController">
+    <stylesheets>
+        <URL value="@product.css" />
+    </stylesheets>
+   <top>
+      <VBox prefHeight="211.0" prefWidth="905.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="905.0" styleClass="title" stylesheets="@product.css">
+               <children>
+                  <Label styleClass="title" stylesheets="@product.css" text="Stocks">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="31.0" prefWidth="905.0" styleClass="hbox1" stylesheets="@product.css">
+               <opaqueInsets>
+                  <Insets bottom="10.0" top="20.0" />
+               </opaqueInsets>
+               <children>
+                  <Label stylesheets="@product.css" text="Search Stock" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="10.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="132.0" prefWidth="905.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="31.0" prefWidth="905.0" styleClass="hbox2" stylesheets="@product.css">
+                           <children>
+                              <Label text="Category :" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ComboBox fx:id="catList" prefHeight="25.0" prefWidth="178.0" promptText="Select Category">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <Label text="Product Name :">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="prodName" prefHeight="25.0" prefWidth="242.0" promptText="Enter Product Name" />
+                              <Button mnemonicParsing="false" onAction="#handleSearchProductByQRCode" text="Search By QRCode">
+                                 <HBox.margin>
+                                    <Insets left="40.0" right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="81.0" prefWidth="905.0" styleClass="hbox2" stylesheets="@product.css" VBox.vgrow="ALWAYS">
+                           <children>
+                              <GridPane prefHeight="91.0" prefWidth="421.0">
+                                <columnConstraints>
+                                  <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="141.0" minWidth="10.0" prefWidth="137.0" />
+                                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="110.0" minWidth="10.0" prefWidth="104.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="89.0" minWidth="10.0" prefWidth="52.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label text="Unit Price Between:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Qty Between :" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="and" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="and" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="minUnit" prefHeight="25.0" prefWidth="123.0" promptText="Min Val" GridPane.columnIndex="1" />
+                                    <TextField fx:id="maxUnit" promptText="Max Val" GridPane.columnIndex="3" />
+                                    <TextField fx:id="minQty" promptText="Min Val" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="maxQty" promptText="Max Val" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <Button mnemonicParsing="false" onAction="#searchCategory" prefHeight="25.0" prefWidth="106.0" text="Search" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Button fx:id="handleReset" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Reset" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="438.0" prefWidth="905.0" styleClass="hbox2" stylesheets="@product.css" BorderPane.alignment="CENTER">
+         <opaqueInsets>
+            <Insets top="10.0" />
+         </opaqueInsets>
+         <children>
+            <HBox prefHeight="40.0" prefWidth="874.0" styleClass="hbox1" stylesheets="@product.css">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="94.0" styleClass="label1" stylesheets="@product.css" text=" Stocks List">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" stylesheets="@product.css" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleAddProduct" prefHeight="25.0" prefWidth="123.0" text="Add Stock">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="408.0" prefWidth="905.0">
+               <children>
+                  <TableView fx:id="prodTable" editable="true" prefHeight="327.0" prefWidth="905.0" HBox.hgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="slNo" prefWidth="75.0" text="#" />
+                      <TableColumn fx:id="productName" prefWidth="186.0" text="Stock Name" />
+                        <TableColumn fx:id="productDesc" prefWidth="204.0" text="Stock Description" />
+                        <TableColumn fx:id="qty" prefWidth="152.0" text="Quantity" />
+                        <TableColumn fx:id="ppu" prefWidth="113.0" text="Price per Unit" />
+                        <TableColumn fx:id="produom" prefWidth="101.0" text="UoM" />
+                        <TableColumn fx:id="qrCode" prefWidth="129.0" text="QRCode" />
+                        <TableColumn fx:id="barCode" prefWidth="125.0" text="BarCode" />
+                        <TableColumn fx:id="modifiedDate" prefWidth="175.0" text="ModifiedDate" />
+                        <TableColumn fx:id="action" prefWidth="105.0" text="Action" />
+                    </columns>
+                  </TableView>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

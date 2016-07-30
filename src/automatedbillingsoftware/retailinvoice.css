@@ -1,0 +1,39 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-color:#cccccc;
+    -fx-background-size: 100%;
+    -fx-background-repeat: no-repeat;
+}
+
+.hbox1{
+    -fx-border-width:2;
+    -fx-background-color:white;
+    -fx-border-color:#2A5058;
+    -fx-font: 10px  "Verdana";
+}
+.hbox2{
+    -fx-border-width:2;
+    -fx-background-color:linear-gradient(#61a2b1, #2A5058);;
+    -fx-border-color:#2A5058;
+}
+
+.hbox2 .label{
+    -fx-text-fill:white;
+    -fx-font-family:  "Verdana";
+}
+
+.label
+{
+    -fx-text-fill: #2A5058;
+    -fx-font-weight: bold;
+    -fx-font: 14px "Verdana";
+}
+
+.label1{
+    -fx-text-fill: #2A5058;
+    -fx-font-weight: bold;
+    -fx-font: 16px "Verdana";
+}

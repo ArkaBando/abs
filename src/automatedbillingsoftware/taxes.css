@@ -1,0 +1,22 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-image: url("image/loginbackground.jpg");
+    -fx-background-size: 100%;
+    -fx-background-repeat: no-repeat;
+}
+
+.hbox1
+{
+    -fx-border-color:#999999;
+    -fx-border-width:2px;
+     -fx-background-color: white;
+}
+.hbox2
+{
+    -fx-border-width:1px;
+    -fx-border-color: #cccccc;
+    -fx-padding: 6px;
+}

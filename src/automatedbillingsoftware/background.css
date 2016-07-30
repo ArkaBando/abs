@@ -1,0 +1,41 @@
+.root {
+    -fx-background-image: url("image/loginbackground.jpg");
+    -fx-background-size: 100%;
+    -fx-background-repeat: no-repeat;
+}
+
+.button {
+    -fx-font: 16px "Serif";
+    -fx-text-fill: white;
+    /*-fx-font-family: "Arial Narrow";*/
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.button:hover{
+    -fx-text-fill: yellow;
+    -fx-background-color: green;
+}
+.label1{
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-size:20px;
+}
+
+.header
+{
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-font-size:20px;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.macip
+{
+    -fx-background-color:white;
+    -fx-text-fill: black;
+    -fx-font-weight:bold;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}

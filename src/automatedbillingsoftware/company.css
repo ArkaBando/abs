@@ -1,0 +1,61 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-image: url("image/loginbackground.jpg");
+    -fx-background-size: 100%;
+    -fx-background-repeat: no-repeat;
+}
+.button {
+    -fx-font: 16px "Serif";
+    -fx-text-fill: white;
+    /*-fx-font-family: "Arial Narrow";*/
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.button:hover{
+    -fx-text-fill: yellow;
+    -fx-background-color: green;
+}
+
+.label{
+    -fx-font-weight: bold;
+/*    -fx-background-color: #61a2b1;*/
+/*    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );*/
+    -fx-text-fill: white;
+    -fx-padding: 5px;
+}
+
+.hbox1{
+    -fx-background-color: white;
+    -fx-border-width: 2px;
+    -fx-border-color: #2A5058;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-indent: 4px;
+}
+
+.hbox1 .label{
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+     -fx-background-color:white;
+}
+
+.hbox2
+{
+ -fx-background-color: linear-gradient(#61a2b1, #2A5058);;
+    -fx-border-width: 1px;
+    -fx-border-color: #2A5058;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-indent: 4px;   
+}
+.hbox2.label{
+    -fx-font: 20px "Serif";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+     -fx-background-color:linear-gradient(#61a2b1, #2A5058);
+     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-indent: 4px;
+}

@@ -1,0 +1,89 @@
+
+.mainFxmlClass {
+    -fx-background-image: url("image/loginbackground.jpg");
+    -fx-background-size: 100%;
+    -fx-background-repeat: no-repeat;
+
+}
+
+.addfile{
+    -fx-background-color: #2A5058;
+    -fx-font: 16px "Serif";
+    -fx-text-fill: white;
+    /*-fx-font-family: "Arial Narrow";*/
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+}
+.addfile>.label
+{
+    -fx-graphic: url("add.png");
+    -fx-text-fill: white;
+}
+.menu-bar{
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+
+
+}
+
+.menu-bar .label {
+    -fx-font-size: 16 pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: #dedede;
+
+}
+
+
+.menu:hover {
+    -fx-background-color: #61a2b1;
+}
+
+.rightmenu{
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+
+}
+.rightmenu .label{
+    -fx-text-fill: white;
+}
+
+.menu .label{ -fx-text-fill: white;}
+
+.menu-item .label{
+    -fx-font-size: 15 pt;
+    -fx-label-line-length: 8;
+    -fx-text-fill: black;
+}
+.iconOpen > .label {
+
+    -fx-graphic:  url("prod.png");
+}
+.iconCat > .label{
+    -fx-graphic:  url("cat.png");
+}
+.iconTax > .label
+{
+    -fx-graphic:  url("cat.png");
+}
+.iconchallan>.label
+{
+    -fx-graphic:  url("image/productimage.png");
+}
+.iconinvoicereport>.label
+{
+    -fx-graphic:  url("image/productimage.png");
+}
+.compText {
+    -fx-padding-left:10px;
+    -fx-font:12px "Verdana";
+    -fx-graphic:  url("image/billing.png");
+    -fx-text-fill: black;
+    -fx-text-decoration:underline;
+    -fx-background-color:#ffffff;
+}
+.compText >.label{
+    -fx-padding-left:10px;
+    -fx-font:18px "Verdana";
+}
+.iconHome {
+    -fx-background-color:#ffffff;
+    -fx-graphic:  url("prod.png");
+}

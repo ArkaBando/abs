@@ -1,0 +1,41 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-image: url("image/loginbackground.jpg");
+    -fx-background-size: 100%;
+    -fx-background-repeat: no-repeat;
+}
+.title
+{
+     -fx-background-color: #2A5058;
+    -fx-font: 20px "Serif";
+    -fx-text-fill: white;
+    /*-fx-font-family: "Arial Narrow";*/
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+}
+.hbox1{
+    -fx-background-color:white;
+    -fx-border-width:2px;
+    -fx-border-color:#666666;
+}
+.hbox1 .label{
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font: 20px "Serif";
+}
+
+.hbox2
+{
+    -fx-background-color:white;    
+}
+.hbox2 .label{
+    -fx-text-fill: #000000;
+    -fx-font: 14px "Serif";
+}
+
+.label1{
+    -fx-font: 20px "Serif";
+}

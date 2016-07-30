@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="homeBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleMouseClick" prefHeight="649.0" prefWidth="976.0" styleClass="mainFxmlClass" stylesheets="@home.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="automatedbillingsoftware.HomeController">
+   <top>
+      <HBox prefHeight="24.0" prefWidth="976.0" styleClass="rightmenu" stylesheets="@home.css" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="37.0">
+               <children>
+                  <ImageView fx:id="imgId" fitHeight="55.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@product.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <MenuBar prefHeight="37.0" prefWidth="339.0" styleClass="addfile" stylesheets="@home.css" HBox.hgrow="ALWAYS">
+              <menus>
+                <Menu mnemonicParsing="false" styleClass="icoopen" text="Open">
+                  <items>
+                        <MenuItem fx:id="menu_prod" mnemonicParsing="false" onAction="#addMenuProducts" styleClass="iconOpen" text="Products" />
+                        <MenuItem fx:id="menu_cat" mnemonicParsing="false" onAction="#addMenuCategories" styleClass="iconCat" text="Categories" />
+                        <MenuItem fx:id="menuTaxId" mnemonicParsing="false" onAction="#addMenuTax" styleClass="iconTax" text="Taxes" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Reports">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#addInvoice" styleClass="iconchallan" text="Retail Invoice" />
+                        <MenuItem mnemonicParsing="false" onAction="#handlenewChallan" styleClass="iconinvoicereport" text="Challan" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Settings">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleComp" text="Company" />
+                        <MenuItem fx:id="logo" mnemonicParsing="false" onAction="#setLogo" text="Logo" />
+                  </items>
+                </Menu>
+              </menus>
+               <HBox.margin>
+                  <Insets right="200.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </MenuBar>
+            <Label fx:id="Infomessage" prefHeight="20.0" prefWidth="170.0" text="Set Company Logo!">
+               <HBox.margin>
+                  <Insets right="10.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="279.0">
+               <children>
+                  <Label fx:id="message" text="Hello ,Arka ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="80.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#handleSignOut" prefHeight="25.0" prefWidth="83.0" text="Sign out">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </top>
+   <center>
+      <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="384.0" prefWidth="438.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="286.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="471.0" minWidth="10.0" prefWidth="290.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="145.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="157.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="148.0" minHeight="10.0" prefHeight="146.0" vgrow="NEVER" />
+        </rowConstraints>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets bottom="80.0" left="200.0" right="200.0" top="80.0" />
+         </BorderPane.margin>
+         <children>
+            <Button fx:id="product_btn" mnemonicParsing="false" onAction="#addProducts" prefHeight="164.0" prefWidth="286.0" style="-fx-background-color: white;" text="Products" GridPane.rowIndex="1" GridPane.vgrow="NEVER" />
+            <Button fx:id="taxId" mnemonicParsing="false" onAction="#addTax" prefHeight="173.0" prefWidth="286.0" style="-fx-background-color: white;" text="Taxes" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+            <Button fx:id="category_btn" mnemonicParsing="false" onAction="#addCategory" prefHeight="166.0" prefWidth="290.0" style="-fx-background-color: white;" text="Categories" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER" />
+            <Button mnemonicParsing="false" onAction="#handleCompany" prefHeight="178.0" prefWidth="288.0" style="-fx-background-color: white;" text="Company" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER" />
+            <Button mnemonicParsing="false" onAction="#handleUser" prefHeight="125.0" prefWidth="355.0" style="-fx-background-color: white;" text="Users" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.vgrow="NEVER" />
+            <ImageView fitHeight="52.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="140.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@prod.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="140.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@product.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="140.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@add.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="140.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@open.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="140.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@image/chart_7.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" prefHeight="133.0" prefWidth="217.0" styleClass="compText" stylesheets="@home.css" text="Automated Billing Software " />
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

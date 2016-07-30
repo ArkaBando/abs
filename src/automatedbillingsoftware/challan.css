@@ -1,0 +1,52 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-image: url("image/loginbackground.jpg");
+    -fx-background-size: 100%;
+    -fx-background-repeat: no-repeat;
+}
+
+.titleBar
+{
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+}
+
+.titleBar .label
+{
+    -fx-text-fill: white;
+    -fx-font-size: 16 pt;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: bold;
+}
+
+.hbox1{
+    -fx-background-color:white;
+    -fx-border-width: 2px;
+    -fx-border-color: #666666;
+}
+.hbox1 .label
+{
+    -fx-font-size: 16 pt;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: bold;
+}
+
+.hbox2
+{
+    -fx-background-color:white;
+
+}
+.hbox2 .label
+{
+    -fx-font-size: 14 pt;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: 200;
+}
+.labeltxt
+{
+    -fx-font-size: 16 pt;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: 500;
+}

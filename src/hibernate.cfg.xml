@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect"> org.hibernate.dialect.DerbyDialect </property>
+        <!--        <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
+        <property name="hibernate.connection.url"> jdbc:derby://localhost:1527/absDb</property>
+        <property name="hibernate.connection.username">abs</property>
+        <property name="hibernate.connection.password">abs@123</property>-->
+        <!--                embedded db script below -->
+        <property name="hibernate.connection.drarkiver_class">org.apache.derby.jdbc.EmbeddedDriver</property>
+        <property name="hibernate.connection.url">jdbc:derby:..\dist\abs_Db;create=true</property>
+        <property name="hibernate.connection.username">abs</property>
+        <property name="hibernate.connection.password">abs@123</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="connection.pool_size">5</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">false</property>
+        <mapping class="automatedbillingsoftware_modal.Company"/>
+        <mapping class="automatedbillingsoftware_modal.Categories"/>
+        <mapping class="automatedbillingsoftware_modal.Products"/>
+        <mapping class="automatedbillingsoftware_modal.Tax"/>
+        <mapping class="automatedbillingsoftware_modal.Challan"/>
+        <mapping class="automatedbillingsoftware_modal.ChallanGenerated"/>
+        <mapping class="automatedbillingsoftware_modal.Users"/>
+        <mapping class="automatedbillingsoftware_modal.InvoiceReport"/>
+        <mapping class="automatedbillingsoftware_modal.Templete"/>
+        
+    </session-factory>
+</hibernate-configuration>
